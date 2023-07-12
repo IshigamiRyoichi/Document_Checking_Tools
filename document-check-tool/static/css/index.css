@@ -1,0 +1,112 @@
+.SignOutButton{
+    background: #cff5f8;
+    font-size: 1.0rem;
+    border: 0;
+    border-radius: 3;
+    color: white;
+    height: 30;
+    padding: 0 10px;
+    margin: 0 0 0 auto;
+    display: block;
+}
+body {
+    background: var(--white-color);
+    font-weight: 400;
+    color: #393939;
+    font-size: 1.6em;
+    font-family: 'Open Sans', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    min-height: 100vh;
+}
+.top{
+    background: linear-gradient(-45deg, #f9c2eb, #a8c2ee, #c2f9d0, #ffdea5) fixed;
+    background-size: cover;
+    animation: GradietionAnimation 9s ease infinite;
+  }
+.header {
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+.header h1 { 
+    font-size: var(--h1-font-size);
+    color: var(--gray-color);
+    text-align: center;
+    margin: 0 3rem;
+}
+@media screen and (min-width: 768px) {
+    .header {
+        width: 750px;
+    }
+    .header h1 { 
+        margin: 0 5rem;
+    }
+}
+.outerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    padding: 36px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px gray;
+    color: gray;
+}
+.outerBox h2 {
+    font-weight: 600;
+    margin-top: 5px;
+} 
+/* .imageUplodeBox {
+    border: 2px dashed #2d6395;
+    padding: 35px 60px;
+    position: relative;
+} 
+.imageLogoAndText p {
+    margin-bottom: 0px;
+} */
+  
+/* .imageUploadInput {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+} */
+.btn--lightBlue,
+a.btn--orange {
+  color: #000000;
+  background-color: #a4ddf4;
+}
+.btn--lightBlue:hover,
+a.btn--lightBlue:hover {
+  color: #050505;
+  background: #a4ddf4;
+}
+
+a.btn--radius {
+   border-radius: 100vh;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+table tr{
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+}
+
+table tr:hover{
+    background-color: #d4f0fd;
+}
+
+table th,table td{
+    text-align: center;
+    width: 25%;
+    padding: 15px 0;
+}
+  
