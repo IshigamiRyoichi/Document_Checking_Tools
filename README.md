@@ -9,7 +9,7 @@ $ pip install pyrebase4
 
 ## textlintのインストール
 ```
-$ $ npm install textlint --save-dev
+$ npm install textlint --save-dev
 ```
 
 ## textlintのルールファイルを作成
@@ -79,6 +79,21 @@ $ apt-get install -y poppler-util
   "filters": {
     "comments": true
   }
+}
+```
+
+## firebaseの設定
+* ./static/json/firebase.jsonに以下の情報を記載する
+```json
+{
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": "",
+    "appId": "",
+    "measurementId": ""
 }
 ```
 
