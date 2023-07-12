@@ -9,7 +9,7 @@ $ pip install pyrebase4
 
 ## textlintのインストール
 ```
-$ $ npm install textlint --save-dev
+$ npm install textlint --save-dev
 ```
 
 ## textlintのルールファイルを作成
