@@ -30,6 +30,11 @@ def upload_pdf_file(pdf_file):
 def run_pdf2text():
     cmd = "pdftotext ./uploads/target.pdf ./uploads/target.md"
     subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    with open("./uploads/target.md", ) as md_file:
+        str_lines = md_file.readlines()
+    with open("./uploads/target.md", mode="w") as md_file:
+        md_file.writelines([str_line.replace("。","。\n").replace("．","．\n") for str_line in str_lines])
+
 
 def run_textlint_and_get_result_list():
     cmd = "npx textlint ./uploads/target.md"
@@ -40,12 +45,20 @@ def run_textlint_and_get_result_list():
     for result in result_list[2:-4]:
         tmp_result = result.split(" error ")
         if len(tmp_result) >= 2:
-            row = tmp_result[0].split(":")[0].strip()
+            row = int(tmp_result[0].split(":")[0].strip())
             colum = tmp_result[0].split(":")[1].strip()
             error_data = re.sub("ja-technical-writing/[a-z | -]*","",tmp_result[1]).strip()
-            result_table.append([row,colum,error_data])
+            result_table.append([row//2,colum,error_data])
     # print(result_table)
     return result_table
+
+def run_textlint_fix_data():
+    cmd = "npx textlint --fix ./uploads/target.md"
+    subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    with open("./uploads/target.md", ) as md_file:
+        data_lines = md_file.read()
+    print(data_lines)
+    return data_lines
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -56,7 +69,7 @@ def login():
     password = request.form["password"]
     try:
         user = auth.sign_in_with_email_and_password(email, password)
-        # print(user)
+        print(user)
         session["usr"] = email
         return redirect(url_for("index"))
     except:
@@ -101,7 +114,8 @@ def resulr():
         upload_pdf_file(pdf_file)
         run_pdf2text()
         result_table = run_textlint_and_get_result_list()
-        return render_template("result.html", result_table=result_table)
+        result_text = run_textlint_fix_data()
+        return render_template("result.html", result_table=result_table, result_text = result_text)
     return redirect(url_for('index'))
 @app.route('/logout')
 def logout():
