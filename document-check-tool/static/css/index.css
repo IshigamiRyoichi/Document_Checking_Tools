@@ -109,4 +109,23 @@ table th,table td{
     width: 25%;
     padding: 15px 0;
 }
-  
+
+.textlint-label,
+.result_text {
+    color: #333;
+}
+
+.textlint-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .9em;
+}
+
+.result_text {
+    width: 95%;
+    padding: 8px 10px;
+    border: 1px solid #969da3;
+    border-radius: 3px;
+    font-size: 0.8em;
+    line-height: 1.5;
+}

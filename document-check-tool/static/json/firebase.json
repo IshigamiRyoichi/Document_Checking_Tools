@@ -1,10 +1,10 @@
 {
-    "apiKey": "",
-    "authDomain": "",
-    "databaseURL": "",
-    "projectId": "",
-    "storageBucket": "",
-    "messagingSenderId": "",
-    "appId": "",
-    "measurementId": ""
+    "apiKey": "AIzaSyCZilKOp4IiKFs8K7r_c6QFDHh9mXVoVDA",
+    "authDomain": "document-check-tool.firebaseapp.com",
+    "databaseURL": "https://document-check-tool-default-rtdb.firebaseio.com",
+    "projectId": "document-check-tool",
+    "storageBucket": "document-check-tool.appspot.com",
+    "messagingSenderId": "208521291040",
+    "appId": "1:208521291040:web:92969042e731ff9837e345",
+    "measurementId": "G-02PW2W7QEL"
 }
